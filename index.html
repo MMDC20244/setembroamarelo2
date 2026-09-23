@@ -42,7 +42,7 @@
     line-height:1.15;
     margin:0;
   }
-  p{margin:0 0 1em; max-width:var(--measure);}
+  p{margin:0 0 1.2em; max-width:var(--measure); line-height:1.75;}
   a{color:var(--yellow-deep);}
   img{max-width:100%;display:block;}
   :focus-visible{outline:3px solid var(--sage); outline-offset:2px;}
@@ -95,9 +95,9 @@
   }
   .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr 0.85fr;
+    grid-template-columns:1.4fr 0.5fr;
     align-items:center;
-    gap:40px;
+    gap:64px;
     padding:76px 0 64px;
   }
   .hero h1{
@@ -116,9 +116,38 @@
     font-weight:600;
   }
   .hero-lede{
-    margin-top:22px;
+    margin-top:26px;
     font-size:19px;
+    line-height:1.75;
     color:var(--ink-soft);
+    max-width:none;
+  }
+  .hero-lede + .hero-lede{
+    margin-top:20px;
+  }
+  .hero-lede:first-of-type{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:21px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .hero-credit{
+    margin-top:28px;
+    font-size:14.5px;
+    line-height:1.85;
+    color:var(--ink-soft);
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    max-width:none;
+  }
+  .hero-credit strong{
+    display:block;
+    margin-bottom:10px;
+    color:var(--ink);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
   }
   .hero-actions{
     margin-top:30px;
@@ -144,7 +173,8 @@
   .ribbon-frame{
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-end;
+    padding-right:12px;
   }
 
   /* section headings */
@@ -299,8 +329,8 @@
     align-items:center;
     justify-content:center;
   }
-  .help-item h3{font-size:17px; margin-bottom:4px;}
-  .help-item p{font-size:15px; color:var(--ink-soft); margin:0;}
+  .help-item h3{font-size:17px; margin-bottom:4px; grid-column:2;}
+  .help-item p{font-size:15px; color:var(--ink-soft); margin:0; grid-column:2;}
 
   /* help banner */
   .help-banner{
@@ -591,13 +621,9 @@
       <p class="eyebrow">Campanha nacional de prevenção ao suicídio</p>
       <h1>Setembro Amarelo</h1>
       <span class="hero-theme">Tema 2026 — Escutar é estar presente</span>
-      <p class="hero-lede"> "Um espaço de apoio, escuta e empatia
-Este site foi criado para ser um porto seguro para todos os estudantes que precisam de ajuda, orientação ou apenas uma palavra amiga. Nosso objetivo é oferecer um atendimento baseado no respeito, no acolhimento e na empatia, fortalecendo as ações de conscientização da campanha Setembro Amarelo.
-Quem Somos Esta plataforma é fruto da dedicação dos alunos do 3º ano do Ensino Médio Técnico em Desenvolvimento de Sistemas da Escola Estadual Professora Apparecida Rahal (Itaquera – Zona Leste/SP).
-O projeto foi desenvolvido sob a orientação das professoras Aline A. de Souza e Isabela Duarte, contando com a colaboração de toda a turma e a participação especial das alunas Rebeca dos Santos e Giovanna Scher."
-</p>
-    
-      
+      <p class="hero-lede">"Um espaço de apoio, escuta e empatia."</p>
+      <p class="hero-lede">Este site foi criado para ser um porto seguro para todos os estudantes que precisam de ajuda, orientação ou apenas uma palavra amiga. Nosso objetivo é oferecer um atendimento baseado no respeito, no acolhimento e na empatia, fortalecendo as ações de conscientização da campanha Setembro Amarelo.</p>
+      <p class="hero-credit"><strong>Quem somos</strong>Esta plataforma é fruto da dedicação dos alunos do 3º ano do Ensino Médio Técnico em Desenvolvimento de Sistemas da Escola Estadual Professora Apparecida Rahal (Itaquera – Zona Leste/SP). O projeto foi desenvolvido sob a orientação das professoras Aline A. de Souza e Isabela Duarte, contando com a colaboração de toda a turma e a participação especial das alunas Rebeca dos Santos e Giovanna Scher.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#ajuda">Onde buscar ajuda</a>
         <a class="btn btn-ghost" href="#chatbot">Falar com o assistente</a>
@@ -778,28 +804,29 @@ O projeto foi desenvolvido sob a orientação das professoras Aline A. de Souza 
         <div class="help-list">
           <div class="help-item">
             <h3>Escute sem pressa e sem julgar</h3>
-            <p>Você não precisa ter a resposta certa. Estar presente, com atenção genuína, já ajuda.</p>
+            <p>Você não precisa ter a resposta certa nem uma solução pronta para oferecer. Reserve um tempo, desligue as distrações e deixe a pessoa falar no ritmo dela, sem interromper para corrigir, minimizar ou dar conselhos antes da hora. Muitas vezes, o simples fato de alguém estar ali, com atenção genuína e sem pressa para encerrar a conversa, já alivia parte do peso que a pessoa carrega sozinha.</p>
           </div>
           <div class="help-item">
             <h3>Pergunte diretamente, com cuidado</h3>
-            <p>"Você chegou a pensar em se machucar ou tirar a própria vida?" é uma pergunta que pode ser feita com carinho, sem rodeios.</p>
+            <p>"Você chegou a pensar em se machucar ou tirar a própria vida?" é uma pergunta que pode e deve ser feita com carinho, sem rodeios e sem medo de "plantar a ideia" — isso não acontece. Perguntar de forma direta mostra que você está realmente disposto a ouvir a resposta, qualquer que ela seja, e costuma trazer alívio para quem já vinha carregando esse pensamento em silêncio, sem coragem de trazê-lo à tona sozinho.</p>
           </div>
           <div class="help-item">
             <h3>Leve a sério qualquer sinal</h3>
-            <p>Evite frases como "isso vai passar" ou "pense pelo lado bom". Reconheça a dor da pessoa como real.</p>
+            <p>Evite frases como "isso vai passar", "pense pelo lado bom" ou "outras pessoas estão pior", mesmo com boa intenção — elas tendem a fazer a pessoa se sentir incompreendida. Reconheça a dor como real e válida, sem comparar, minimizar ou tentar resolver tudo na mesma conversa. Um comentário feito "de brincadeira" sobre desistir ou sumir também merece ser acolhido com seriedade, não ignorado.</p>
           </div>
           <div class="help-item">
             <h3>Ajude a buscar apoio profissional</h3>
-            <p>Ofereça-se para ligar junto para o CVV, acompanhar a um posto de saúde ou marcar uma consulta.</p>
+            <p>Ofereça-se para ligar junto para o CVV, acompanhar a pessoa até um posto de saúde ou CAPS, ou ajudar a marcar uma consulta com psicólogo ou psiquiatra. Muitas vezes o primeiro passo é o mais difícil, então oferecer companhia prática — pesquisar endereços, ir junto até a porta, esperar do lado de fora — pode pesar mais do que qualquer palavra. Continue por perto depois do primeiro atendimento; buscar ajuda costuma ser um processo, não um evento único.</p>
           </div>
           <div class="help-item">
             <h3>Não deixe a pessoa sozinha em um momento de crise aguda</h3>
-            <p>Permaneça por perto ou acione alguém de confiança e, se necessário, um serviço de emergência.</p>
+            <p>Se perceber um risco iminente, permaneça por perto, mantenha a calma e evite deixá-la sem companhia até que a situação esteja mais segura. Acione alguém de confiança para dividir essa responsabilidade com você e, se for necessário, não hesite em chamar o SAMU (192) ou levar a pessoa a um serviço de emergência. Agir rápido nesse momento pode fazer toda a diferença, e pedir ajuda para você mesmo lidar com a situação também é um gesto de cuidado, não de fraqueza.</p>
           </div>
         </div>
         <div>
-          <p>Cuidar de quem cuida também importa. Apoiar alguém em sofrimento pode ser desgastante — procure conversar com outras pessoas de confiança, dividir a responsabilidade e buscar orientação profissional para você também.</p>
-          <p>Se você mesmo está passando por um momento difícil, os mesmos canais de ajuda listados abaixo estão abertos para você. Pedir ajuda é, sempre, um passo válido.</p>
+          <p>Cuidar de quem cuida também importa. Apoiar alguém em sofrimento pode ser desgastante, física e emocionalmente, mesmo quando feito com todo o amor do mundo. Você não precisa dar conta disso sozinho: procure conversar com outras pessoas de confiança, dividir a responsabilidade do cuidado e buscar orientação profissional para você também, se sentir que precisa.</p>
+          <p>Se você mesmo está passando por um momento difícil, os mesmos canais de ajuda listados abaixo estão abertos para você, sem exceção. Pedir ajuda é, sempre, um passo válido — não é sinal de fraqueza, e sim de coragem para reconhecer que ninguém precisa enfrentar tudo sozinho.</p>
+          <p>Lembre-se também de respeitar os limites da pessoa que está sofrendo. Oferecer apoio não significa forçar uma conversa ou uma decisão antes que ela esteja pronta; significa deixar claro, de forma constante, que você está disponível sempre que ela precisar.</p>
         </div>
       </div>
     </div>
